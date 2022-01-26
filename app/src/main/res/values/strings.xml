@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Drugsy Reminder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="DefaultName">Lijek</string>
+    <string name="ConsumeTime">Vrijeme kada se pije:</string>
+    <string name="DrugHint">Unesite ime lijeka</string>
+</resources>
