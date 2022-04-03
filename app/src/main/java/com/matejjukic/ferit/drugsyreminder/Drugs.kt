@@ -12,4 +12,5 @@ data class Drugs(
     @ColumnInfo(name = "Hour") val hour: Int?,
     @ColumnInfo(name = "Minute") val minute: Int?,
     @ColumnInfo(name = "Step") val step: Int?,
+    @ColumnInfo(name = "Current") val current: Boolean?,
 )

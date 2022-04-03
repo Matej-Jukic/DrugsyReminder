@@ -5,7 +5,7 @@
     android:id="@+id/item_holder"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#5EFF0E"
+    android:background="@color/lighter_green"
     android:layout_marginTop="10dp"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp">
@@ -18,8 +18,8 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:maxWidth="150dp"
-        android:text="TextView"
-        android:textSize="20dp"
+        android:text="@string/Name"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="5dp"
-        android:text="TextView"
+        android:text="@string/NextUse"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/pointer"
         app:layout_constraintTop_toTopOf="parent" />

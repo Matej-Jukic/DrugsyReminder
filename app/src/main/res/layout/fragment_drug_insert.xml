@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="70dp"
-            android:text="Iduće uzimanje za"
+            android:text="@string/NextUsage"
             app:layout_constraintBottom_toTopOf="@+id/save"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/time_Picker" />
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="97dp"
             android:layout_marginBottom="70dp"
-            android:text="SPREMI"
+            android:text="@string/Save"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

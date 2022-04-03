@@ -5,4 +5,13 @@
     <string name="DefaultName">Lijek</string>
     <string name="ConsumeTime">Vrijeme kada se pije:</string>
     <string name="DrugHint">Unesite ime lijeka</string>
+    <string name="Name">Lijek</string>
+    <string name="NextUse">00:00</string>
+    <string name="Edit">Uredi</string>
+    <string name="Delete">Izbriši</string>
+    <string name="Offset">12</string>
+    <string name="TimeOffset">Razmak između doza:</string>
+    <string name="IntakeTime">12:00</string>
+    <string name="NextUsage">Iduće uzimanje za</string>
+    <string name="Save">SPREMI</string>
 </resources>

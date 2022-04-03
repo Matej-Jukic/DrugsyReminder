@@ -51,14 +51,17 @@ class DrugInsertFragment : Fragment() {
                         ID = random.nextInt(100000)
                     }
                         while(!checkID())
-                    MainActivity.getDao().insert(Drugs(ID.toString(),name.text.toString(),timePicker.hour, timePicker.minute,spinner.selectedItem.toString().toInt()))
+                    MainActivity.getDao().insert(Drugs(ID.toString(),name.text.toString(),timePicker.hour, timePicker.minute,spinner.selectedItem.toString().toInt(), false))
                     Toast.makeText(activity?.applicationContext, "Stavka dodana", Toast.LENGTH_SHORT).show()
+                    activity?.finish()
+
                 }
             }
             else{
                 runBlocking{
                     MainActivity.getDao().updateDrug(arguments?.getString(FRAGMENT_INDENTIFIER)!!, name.text.toString(),timePicker.hour, timePicker.minute,spinner.selectedItem.toString().toInt())
                     Toast.makeText(activity?.applicationContext, "Stavka izmijenjena", Toast.LENGTH_SHORT).show()
+                    activity?.finish()
                 }
             }
         }
@@ -78,4 +81,7 @@ class DrugInsertFragment : Fragment() {
         }
         return checker
     }
+
+
+
 }

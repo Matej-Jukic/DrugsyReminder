@@ -13,11 +13,11 @@ interface DrugsDao {
     @Query("DELETE FROM Drugs")
     suspend fun removeAll()
 
-    @Query("UPDATE Drugs SET Hour = :outerHour WHERE id")
-    suspend fun updateHour(outerHour: Int)
+    @Query("UPDATE Drugs SET hour=(hour+step)%24 WHERE id=:id")
+    suspend fun updateHour(id: String)
 
-    @Query("UPDATE Drugs SET hour=hour+step WHERE id")
-    suspend fun updateHour()
+    @Query("UPDATE Drugs SET Current = :state WHERE id=:id")
+    suspend fun updateState(state: Boolean, id: String)
 
     @Query("SELECT * FROM Drugs WHERE Id = :id")
     suspend fun getDrug(id: String):Drugs

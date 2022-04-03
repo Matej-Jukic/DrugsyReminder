@@ -27,6 +27,7 @@ class DrugInfoFragment : Fragment() {
         // Inflate the layout for this fragment
         val drugInsertFragment = DrugInsertFragment()
         val view = inflater.inflate(R.layout.fragment_drug_info, container, false)
+        var flag = false
         name = view.findViewById(R.id.Name)
         intakeTime = view.findViewById(R.id.intakeTime)
         timeOffset = view.findViewById(R.id.timeOffset)
@@ -49,14 +50,19 @@ class DrugInfoFragment : Fragment() {
             runBlocking {
                 MainActivity.getDao().delete(drug)
                 Toast.makeText(activity?.applicationContext, "Izbrisano", Toast.LENGTH_LONG).show()
+                activity?.finish()
             }
         }
         bundle.putString(FRAGMENT_INDENTIFIER, arguments?.getString(KEY))
         drugInsertFragment.arguments = bundle
         view.findViewById<Button>(R.id.edit).setOnClickListener{
-            val fragmentTransaction: FragmentTransaction?=activity?.supportFragmentManager?.beginTransaction()
-            fragmentTransaction?.replace(R.id.fragment_placeholder, drugInsertFragment)
-            fragmentTransaction?.commit()
+                val fragmentTransaction: FragmentTransaction?=activity?.supportFragmentManager?.beginTransaction()
+                fragmentTransaction?.replace(R.id.fragment_placeholder, drugInsertFragment)
+                fragmentTransaction?.commit()
+
+
+
+
         }
         return view
     }
